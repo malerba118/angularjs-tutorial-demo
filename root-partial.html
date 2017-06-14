@@ -1,0 +1,16 @@
+<header>
+    <h1>AngularJS Demo App</h1>
+    <h2>Consuming an API with AngularJS</h2>
+</header>
+
+<div id="content">
+    <div id="note-list">
+        <div 
+             class="note-list-item" 
+             ng-repeat="note in notes"
+             ui-sref="note-detail({noteId: note.id})">
+            <p class="note-list-title">{{note.title}}</p>
+        </div>
+    </div>
+    <div id="note-detail" ui-view></div>
+</div>
